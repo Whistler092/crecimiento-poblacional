@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/static/css/main.68a98085.chunk.css",
-    "main.js": "/static/js/main.c0466e9d.chunk.js",
-    "main.js.map": "/static/js/main.c0466e9d.chunk.js.map",
-    "runtime~main.js": "/static/js/runtime~main.a8a9905a.js",
-    "runtime~main.js.map": "/static/js/runtime~main.a8a9905a.js.map",
-    "static/js/2.1c83d60f.chunk.js": "/static/js/2.1c83d60f.chunk.js",
-    "static/js/2.1c83d60f.chunk.js.map": "/static/js/2.1c83d60f.chunk.js.map",
-    "index.html": "/index.html",
-    "precache-manifest.7ff84dc3b598e9115bca100929919b9b.js": "/precache-manifest.7ff84dc3b598e9115bca100929919b9b.js",
-    "service-worker.js": "/service-worker.js",
-    "static/css/main.68a98085.chunk.css.map": "/static/css/main.68a98085.chunk.css.map"
+    "main.css": "/crecimiento-poblacional/static/css/main.68a98085.chunk.css",
+    "main.js": "/crecimiento-poblacional/static/js/main.057b69a4.chunk.js",
+    "main.js.map": "/crecimiento-poblacional/static/js/main.057b69a4.chunk.js.map",
+    "runtime~main.js": "/crecimiento-poblacional/static/js/runtime~main.31bb0aaf.js",
+    "runtime~main.js.map": "/crecimiento-poblacional/static/js/runtime~main.31bb0aaf.js.map",
+    "static/js/2.1c83d60f.chunk.js": "/crecimiento-poblacional/static/js/2.1c83d60f.chunk.js",
+    "static/js/2.1c83d60f.chunk.js.map": "/crecimiento-poblacional/static/js/2.1c83d60f.chunk.js.map",
+    "index.html": "/crecimiento-poblacional/index.html",
+    "precache-manifest.1d5e77d41bfc7bd082bb55d08b5c1f20.js": "/crecimiento-poblacional/precache-manifest.1d5e77d41bfc7bd082bb55d08b5c1f20.js",
+    "service-worker.js": "/crecimiento-poblacional/service-worker.js",
+    "static/css/main.68a98085.chunk.css.map": "/crecimiento-poblacional/static/css/main.68a98085.chunk.css.map"
   }
 }
