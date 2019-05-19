@@ -1,26 +1,45 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { Component } from 'react';
+import { Tabs, Tab } from 'react-bootstrap';
 import './App.css';
+import AboutOut from './Components/AboutOut';
+import PopulationGrowthSimulator from './Components/PopulationGrowthSimulator';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
+class App extends Component {
+
+  constructor(props) {
+    super(props);
+    this.handleSelect = this.handleSelect.bind(this);
+
+    this.state = {
+      key: 1
+    };
+  }
+
+  handleSelect(key) {
+    console.log(`selected ${key}`);
+    this.setState({ key });
+  }
+
+
+  render() {
+    return (
+      <div className="App">
+
+        <Tabs
+          activeKey={this.state.key}
+          onSelect={this.handleSelect}
+          id="controlled-tab"
         >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+          <Tab eventKey={1} title="Simulador de Crecimiento Poblacional">
+            <PopulationGrowthSimulator />
+          </Tab>
+          <Tab eventKey={2} title="Creditos">
+            <AboutOut />
+          </Tab>
+        </Tabs>
+      </div>
+    );
+  }
 }
 
 export default App;
