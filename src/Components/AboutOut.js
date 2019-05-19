@@ -11,7 +11,7 @@ class AboutOut extends Component {
                         <h1>Creado por:</h1>
                         <p>Camilo Quintero</p>
                         <p>David Leandro Zuluaga</p>
-                        <p>Ramiro Andrés Bedoya Escobar</p>
+                        <p>Ramiro Andrés Bedoya E.</p>
                         </Col>
                 </Row>
             </Grid>

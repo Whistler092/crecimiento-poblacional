@@ -4,9 +4,12 @@
   "private": true,
   "homepage": "https://whistler092.github.io/crecimiento-poblacional/",
   "dependencies": {
+    "chart.js": "^2.8.0",
+    "mathjs": "^5.10.3",
     "mathjs-simple-integral": "^0.1.1",
     "react": "^16.8.6",
     "react-bootstrap": "^0.32.4",
+    "react-chartjs-2": "^2.7.6",
     "react-dom": "^16.8.6",
     "react-scripts": "3.0.1"
   },
