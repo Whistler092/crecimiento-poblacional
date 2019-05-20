@@ -172,7 +172,7 @@ class PopulationGrowthSimulator extends Component {
         const K = this.calcularDiferencias();
         this.calcularCrecimientoEnTiempo(K);
         this.calcularCrecimientoEnCantidad(K);
-
+        this.graficar(K);
     }
 
     render() {
