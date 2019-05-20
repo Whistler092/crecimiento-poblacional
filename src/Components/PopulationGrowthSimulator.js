@@ -94,7 +94,6 @@ class PopulationGrowthSimulator extends Component {
 
     graficar = (K) => {
 
-        debugger;
         let crecimientoEnTiempo = this.state.crecimientoEnTiempo.tiempo;
         let tiempoCrecimientoInicial = this.state.tiempoCrecimientoInicial;
 
@@ -124,14 +123,14 @@ class PopulationGrowthSimulator extends Component {
             label: "Crecimiento Poblacional",
             backgroundColor: 'rgb(255, 99, 132)',
             borderColor: 'rgb(255, 99, 132)',
-            data: dataFields,
+            data: dataFields.reverse(),
         }];
         console.log("data", datasetsLocal);
 
         this.setState(prevState => ({
             data: {
                 ...prevState.data,
-                labels: labels,
+                labels: labels.reverse(),
                 datasets: datasetsLocal
             }
         }))

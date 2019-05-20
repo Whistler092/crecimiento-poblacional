@@ -140,20 +140,18 @@ const PopulationForm = ({ handleSaveForm, initial }) => {
                             <FormGroup>
                                 <InputGroup>
                                     <InputGroup.Addon>¿Cuanta población crecerá en el siguiente tiempo: </InputGroup.Addon>
-                                    <Col xs={12} md={12} lg={12}>
-                                        <Col xs={4} md={4} lg={4}>
+                                        <Col xs={12} md={6} lg={4}>
                                             <FormControl type="number" id="crecimientoEnTiempo_horas" name="crecimientoEnTiempo_horas"
                                                 onChange={handleChange} onBlur={handleBlur} value={values.crecimientoEnTiempo_horas}
                                                 placeholder="Horas" /></Col>
-                                        <Col xs={4} md={4} lg={4}>
+                                        <Col xs={12} md={6} lg={4}>
                                             <FormControl type="number" id="crecimientoEnTiempo_minutos" name="crecimientoEnTiempo_minutos"
                                                 onChange={handleChange} onBlur={handleBlur} value={values.crecimientoEnTiempo_minutos}
                                                 placeholder="Minutos" /></Col>
-                                        <Col xs={4} md={4} lg={4}>
+                                        <Col xs={12} md={6} lg={4}>
                                             <FormControl type="number" id="crecimientoEnTiempo_segundos" name="crecimientoEnTiempo_segundos"
                                                 onChange={handleChange} onBlur={handleBlur} value={values.crecimientoEnTiempo_segundos}
                                                 placeholder="Segundos" /></Col>
-                                    </Col>
                                     <InputGroup.Addon> (HH:MM:SS)?</InputGroup.Addon>
                                     <span >{errors.crecimientoEnTiempo_tiempo && touched.crecimientoEnTiempo_horas && touched.crecimientoEnTiempo_minutos && touched.crecimientoEnTiempo_segundos}</span>
                                 </InputGroup>
