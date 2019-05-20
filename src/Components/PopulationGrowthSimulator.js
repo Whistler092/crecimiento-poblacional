@@ -99,7 +99,7 @@ class PopulationGrowthSimulator extends Component {
 
         let count = crecimientoEnTiempo;
         let labels = [];
-        
+
         let fistCalc = this.calcularCrecimientoEnIntervalos(K, crecimientoEnTiempo);
         let dataFields = [fistCalc];
         labels.push(this.minTommss(count));
@@ -107,12 +107,12 @@ class PopulationGrowthSimulator extends Component {
         while (count >= 0) {
             if (crecimientoEnTiempo > tiempoCrecimientoInicial) {
                 count--;
-                if(count < 0){
+                if (count < 0) {
                     labels.push(this.minTommss(0));
-                }else {
+                } else {
                     labels.push(this.minTommss(count));
                 }
-                
+
                 let poblacion = this.calcularCrecimientoEnIntervalos(K, count);
 
                 dataFields.push(poblacion);
@@ -176,7 +176,7 @@ class PopulationGrowthSimulator extends Component {
     }
 
     render() {
-        let tiempo2 = `población en tiempo ${this.minTommss(this.state.tiempoCrecimientoInicial)} ${this.state.tiempoCrecimientoInicial > 1 ? 'Horas' : 'Hora'}: ${new Intl.NumberFormat('en-IN', { maximumSignificantDigits: 3 }).format(this.state.poblacionEnDeterminadoTiempo)}`;
+        let tiempo2 = `Y dicha población en ${this.minTommss(this.state.tiempoCrecimientoInicial)} ${this.state.tiempoCrecimientoInicial > 1 ? 'Horas' : 'Hora'} será de ${new Intl.NumberFormat('en-IN', { maximumSignificantDigits: 3 }).format(this.state.poblacionEnDeterminadoTiempo)}`;
 
         let data = this.state.data;
         let initialValues = this.state;
@@ -188,12 +188,12 @@ class PopulationGrowthSimulator extends Component {
                         <h2>Simulador de Crecimiento poblacional de Bacterias</h2>
                         <hr></hr>
                         <PopulationForm handleSaveForm={this.handleSaveForm} initial={initialValues} />
-                        <p>La población de una determinada comunidad de bacterias es de: {new Intl.NumberFormat('en-IN', { maximumSignificantDigits: 3 }).format(this.state.poblacionInicial)}, el número de bacterias se duplica despues de una hora.</p>
-                        <p>Población Inicial: {new Intl.NumberFormat('en-IN', { maximumSignificantDigits: 3 }).format(this.state.poblacionInicial)} Bacterias</p>
+                        {/* <p>La población de es de: {new Intl.NumberFormat('en-IN', { maximumSignificantDigits: 3 }).format(this.state.poblacionInicial)}, el número de bacterias se duplica despues de una hora.</p> */}
+                        <p>La Población Inicial una determinada comunidad de bacterias es : {new Intl.NumberFormat('en-IN', { maximumSignificantDigits: 3 }).format(this.state.poblacionInicial)} Bacterias</p>
                         <p>{tiempo2} Bacterias</p>
-                        <p>Población en {this.minTommss(this.state.crecimientoEnTiempo.tiempo)} {this.state.crecimientoEnTiempo.tiempo > 1 ? 'Horas' : 'Hora'}: {new Intl.NumberFormat('en-IN', { maximumSignificantDigits: 3 }).format(this.state.crecimientoEnTiempo.poblacionFinal)} Bacterias</p>
-                        <p>¿Cuanto tardaría en completar {new Intl.NumberFormat('en-IN', { maximumSignificantDigits: 3 }).format(this.state.crecimientoEnCantidad.poblacion)} bacterias?</p>
-                        <p>tardaría {this.minTommss(this.state.crecimientoEnCantidad.tiempoFinal)} {this.state.crecimientoEnCantidad.tiempoFinal > 1 ? 'Horas' : 'Hora'}</p>
+                        <p><strong>Caso 1: </strong> La población en {this.minTommss(this.state.crecimientoEnTiempo.tiempo)} {this.state.crecimientoEnTiempo.tiempo > 1 ? 'Horas' : 'Hora'} será de {new Intl.NumberFormat('en-IN', { maximumSignificantDigits: 3 }).format(this.state.crecimientoEnTiempo.poblacionFinal)} Bacterias</p>
+                        <p><strong>Caso 2:</strong> ¿Cuanto tardaría en completar {new Intl.NumberFormat('en-IN', { maximumSignificantDigits: 3 }).format(this.state.crecimientoEnCantidad.poblacion)} bacterias?</p>
+                        <p>La población tardaría {this.minTommss(this.state.crecimientoEnCantidad.tiempoFinal)} {this.state.crecimientoEnCantidad.tiempoFinal > 1 ? 'Horas' : 'Hora'} en crecer</p>
                         <Bar data={data} />
                     </Col>
                 </Row>
