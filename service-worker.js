@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/crecimiento-poblacional/precache-manifest.5879ecefdf503bde05b99c319dc09622.js"
+  "/crecimiento-poblacional/precache-manifest.a4f7476f2a728cc4af71f8d539a9f1cc.js"
 );
 
 self.addEventListener('message', (event) => {
