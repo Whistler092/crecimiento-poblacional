@@ -81,9 +81,7 @@ const PopulationForm = ({ handleSaveForm, initial }) => {
                     console.log("submitting ...");
                     setSubmitting(false);
                     handleSaveForm(values);
-
                     /* resetForm(initialValues); */
-
                 }}
             >
                 {({
@@ -105,12 +103,11 @@ const PopulationForm = ({ handleSaveForm, initial }) => {
                                         placeholder="Digita la cantidad inicial de Población" />
                                     <InputGroup.Addon>Bacterias</InputGroup.Addon>
                                     <span >{errors.poblacionInicial && touched.poblacionInicial && errors.poblacionInicial}</span>
-
                                 </InputGroup>
                             </FormGroup>
                             <FormGroup>
                                 <InputGroup>
-                                    <InputGroup.Addon>Tiempo 1 (HH:MM:SS)</InputGroup.Addon>
+                                    <InputGroup.Addon>Tiempo de muestra 1 (HH:MM:SS)</InputGroup.Addon>
                                     <Col xs={10} md={10} lg={10}>
                                         <Col xs={4} md={4} lg={4}>
                                             <FormControl type="number" id="tiempoCrecimientoInicial_horas" name="tiempoCrecimientoInicial_horas"
@@ -130,7 +127,7 @@ const PopulationForm = ({ handleSaveForm, initial }) => {
                             </FormGroup>
                             <FormGroup>
                                 <InputGroup>
-                                    <InputGroup.Addon>Población En Tiempo 1</InputGroup.Addon>
+                                    <InputGroup.Addon>Cantidad de bacterias en Tiempo 1</InputGroup.Addon>
                                     <FormControl type="number" id="poblacionEnDeterminadoTiempo" name="poblacionEnDeterminadoTiempo"
                                         onChange={handleChange} onBlur={handleBlur} value={values.poblacionEnDeterminadoTiempo}
                                         placeholder="Digita La población Tiempo 1" />
