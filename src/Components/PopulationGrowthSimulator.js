@@ -120,7 +120,7 @@ class PopulationGrowthSimulator extends Component {
         }
 
         let datasetsLocal = [{
-            label: "Crecimiento Poblacional",
+            label: `Crecimiento Poblacional en ${this.minTommss(crecimientoEnTiempo)} ${crecimientoEnTiempo > 1 ? 'Horas' : 'Hora'}`,
             backgroundColor: 'rgb(255, 99, 132)',
             borderColor: 'rgb(255, 99, 132)',
             data: dataFields.reverse(),
@@ -194,7 +194,9 @@ class PopulationGrowthSimulator extends Component {
                         <p><strong>Caso 1: </strong> La población en {this.minTommss(this.state.crecimientoEnTiempo.tiempo)} {this.state.crecimientoEnTiempo.tiempo > 1 ? 'Horas' : 'Hora'} será de {new Intl.NumberFormat('en-IN', { maximumSignificantDigits: 3 }).format(this.state.crecimientoEnTiempo.poblacionFinal)} Bacterias</p>
                         <p><strong>Caso 2:</strong> ¿Cuanto tardaría en completar {new Intl.NumberFormat('en-IN', { maximumSignificantDigits: 3 }).format(this.state.crecimientoEnCantidad.poblacion)} bacterias?</p>
                         <p>La población tardaría {this.minTommss(this.state.crecimientoEnCantidad.tiempoFinal)} {this.state.crecimientoEnCantidad.tiempoFinal > 1 ? 'Horas' : 'Hora'} en crecer</p>
+                        <hr></hr>
                         <Bar data={data} />
+                        <hr></hr>
                     </Col>
                 </Row>
             </Grid>
